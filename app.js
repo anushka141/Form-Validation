@@ -20,7 +20,7 @@ sub.addEventListener("click", () => {
     ex[0].style.visibility = "visible";
     user.style.border = "3px solid red";
     // user.innerHTML="User Name Invalid";
-    note[0].innerHTML = "Enter username";
+    note[0].innerHTML = "Enter valid username";
     note[0].style.visibility="visible";
   }
 
@@ -72,7 +72,7 @@ sub.addEventListener("click", () => {
 });
 function checkuser() {
   let x = user.value;
-  let re = /[a-z]/;
+  let re = /^[a-z]+$/;
   console.log(re.test(x));
   if (re.test(x)) {
     return true;
