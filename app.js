@@ -46,6 +46,9 @@ sub.addEventListener("click", () => {
     ps2.style.border = "3px solid red";
     note[3].innerHTML = "Password does not match";
   }
+  if(checkuser() && checkemail() && checkpass1() && checkpass2()){
+      sub.style.opacity=".5";
+  }
 });
 function checkuser() {
   let x = user.value;
