@@ -10,41 +10,61 @@ var note = document.querySelectorAll("p");
 sub.addEventListener("click", () => {
     // note.style.color="red";
   if (checkuser()) {
+    
     ch[0].style.visibility = "visible";
+    note[0].style.visibility="hidden";
+    ex[0].style.visibility = "hidden";
     user.style.border = "3px solid green";
   } else {
+    ch[0].style.visibility = "hidden";
     ex[0].style.visibility = "visible";
     user.style.border = "3px solid red";
     // user.innerHTML="User Name Invalid";
     note[0].innerHTML = "Enter username";
+    note[0].style.visibility="visible";
   }
 
   if (checkemail()) {
     ch[1].style.visibility = "visible";
+    note[1].style.visibility="hidden";
+    ex[1].style.visibility = "hidden";
     em.style.border = "3px solid green";
   } else {
     em.value = "";
+    ch[1].style.visibility = "hidden";
     ex[1].style.visibility = "visible";
     em.style.border = "3px solid red";
+    note[1].style.visibility="visible";
+
     note[1].innerHTML = "Email-Id invalid";
   }
   if (checkpass1()) {
     ch[2].style.visibility = "visible";
+    note[2].style.visibility="hidden";
+    ex[2].style.visibility = "hidden";
     ps1.style.border = "3px solid green";
   } else {
     ps1.value = "";
+    ch[2].style.visibility = "hidden";
     ex[2].style.visibility = "visible";
     ps1.style.border = "3px solid red";
     note[2].innerHTML = "enter password";
+    note[2].style.visibility="visible";
+
   }
   if (checkpass2()) {
     ch[3].style.visibility = "visible";
+    note[3].style.visibility="hidden";
+    ex[3].style.visibility = "hidden";
     ps2.style.border = "3px solid green";
   } else {
     ps2.value = "";
+    ch[3].style.visibility = "hidden";
     ex[3].style.visibility = "visible";
     ps2.style.border = "3px solid red";
     note[3].innerHTML = "Password does not match";
+    note[3].style.visibility="visible";
+
   }
   if(checkuser() && checkemail() && checkpass1() && checkpass2()){
       sub.style.opacity=".5";
